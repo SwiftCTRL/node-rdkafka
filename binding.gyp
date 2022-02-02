@@ -80,17 +80,18 @@
                     "deps/librdkafka.gyp:librdkafka"
                   ],
                   "include_dirs": [
-                    "deps/librdkafka/src",
-                    "deps/librdkafka/src-cpp"
+                    "build/include/librdkafka",
                   ],
                   'conditions': [
                     [
                       'OS=="linux"',
                       {
-                        "libraries": [
-                          "../build/deps/librdkafka.so",
-                          "../build/deps/librdkafka++.so",
-                          "-Wl,-rpath='$$ORIGIN/../deps'",
+                          "libraries": [
+                          "./Release/librdkafka.so",
+                          "./Release/librdkafka.so.1",
+                          "./Release/librdkafka++.so",
+                          "./Release/librdkafka++.so.1",
+                          "-Wl,-rpath,'$$ORIGIN'",
                         ],
                       }
                     ],
@@ -98,8 +99,11 @@
                       'OS=="mac"',
                       {
                         "libraries": [
-                          "../build/deps/librdkafka.dylib",
-                          "../build/deps/librdkafka++.dylib",
+                          "./Release/librdkafka.dylib",
+                          "./Release/librdkafka.1.dylib",
+                          "./Release/librdkafka++.dylib",
+                          "./Release/librdkafka++.1.dylib",
+                          "-Wl,-rpath,@loader_path"
                         ],
                       }
                     ]

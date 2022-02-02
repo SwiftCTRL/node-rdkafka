@@ -33,20 +33,18 @@
                     'OS=="mac"',
                     {
                       'outputs': [
-                        'deps/librdkafka/src-cpp/librdkafka++.dylib',
-                        'deps/librdkafka/src-cpp/librdkafka++.1.dylib',
-                        'deps/librdkafka/src/librdkafka.dylib',
-                        'deps/librdkafka/src/librdkafka.1.dylib'
+                        '../build/Release/librdkafka++.dylib',
+                        '../build/Release/librdkafka++.1.dylib',
+                        '../build/Release/librdkafka.dylib',
+                        '../build/Release/librdkafka.1.dylib'
                       ],
                     },
                     {
                       'outputs': [
-                        'deps/librdkafka/src-cpp/librdkafka++.so',
-                        'deps/librdkafka/src-cpp/librdkafka++.so.1',
-                        'deps/librdkafka/src/librdkafka.so',
-                        'deps/librdkafka/src/librdkafka.so.1',
-                        'deps/librdkafka/src-cpp/librdkafka++.a',
-                        'deps/librdkafka/src/librdkafka.a',
+                        '../build/Release/librdkafka++.so',
+                        '../build/Release/librdkafka++.so.1',
+                        '../build/Release/librdkafka.so',
+                        '../build/Release/librdkafka.so.1',
                       ],
                     }
                   ]

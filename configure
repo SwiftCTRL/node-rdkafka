@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# When changing this file, also see .util/configure.js
+
 # This file is intended to be run on unix systems to configure librdkafka
 # inside the submodules
 
@@ -10,6 +12,6 @@ scriptdir=$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)
 
 pushd ./deps/librdkafka &> /dev/null
 
-./configure --prefix="${scriptdir}/build/deps" --libdir="${scriptdir}/build/deps" $*
+./configure --prefix="${scriptdir}/build" --libdir="${scriptdir}/build/Release"
 
 popd &> /dev/null

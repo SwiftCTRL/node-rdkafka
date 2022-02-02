@@ -1,12 +1,13 @@
 'use strict';
 
+// when changing this file, also see ../configure
 var query = process.argv[2];
 
 var fs = require('fs');
 var path = require('path');
 
 var baseDir = path.resolve(__dirname, '../');
-var releaseDir = path.join(baseDir, 'build', 'deps');
+var releaseDir = path.join(baseDir, 'build', 'Release');
 
 var isWin = /^win/.test(process.platform);
 
