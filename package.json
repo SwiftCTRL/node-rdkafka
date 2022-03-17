@@ -1,6 +1,6 @@
 {
-  "name": "@swftctrl/node-rdkafka",
-  "version": "1.0.0",
+  "name": "@swiftctrl/node-rdkafka",
+  "version": "1.0.2",
   "description": "SwiftConnect Node.js bindings for librdkafka",
   "librdkafka": "1.8.2",
   "main": "lib/index.js",
@@ -9,8 +9,7 @@
     "build": "node-gyp build",
     "test": "make test",
     "test:e2e": "make e2e",
-    "install": "node-gyp-build",
-    "prepack": "node ./ci/prepublish.js"
+    "install": "node-gyp-build"
   },
   "keywords": [
     "kafka",
@@ -18,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:SwiftCTRL/node-rdkafka.git#Include_librdkafka_library"
+    "url": "git@github.com:SwiftCTRL/node-rdkafka.git"
   },
   "contributors": [
     {
